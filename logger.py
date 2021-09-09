@@ -22,7 +22,7 @@ class Messenger_Logger(logging.getLoggerClass()):
         LOG_FORMAT = '"%(asctime)s %(filename)s:%(lineno)-4d %(levelname)s %(message)s"'
         formatter = logging.Formatter(LOG_FORMAT)
 
-        file_handler = logging.FileHandler(f'.//logs//{self.file}', mode='a')
+        file_handler = logging.FileHandler(f'.//logs//{self.log_type}//{self.file}', mode='a')
         file_handler.setFormatter(formatter)
         file_handler.setLevel(logging.INFO)
 
