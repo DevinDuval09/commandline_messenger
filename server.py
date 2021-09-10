@@ -13,7 +13,6 @@ async def route_message(reader, writer):
     logger.info(f"Connected clients: {client_messages.keys()}")
     logger.info(f"Messages: {client_messages}")
     logger.info("Awaiting requests")
-    #while True:
     data = await reader.read(4096)
     decoded_data = data.decode("utf-8")
     logger.info("Data: %s" % decoded_data)
@@ -27,7 +26,6 @@ async def route_message(reader, writer):
         logger.critical(e)
         logger.critical("request: %s" % request)
         logger.critical("decoded: %s" % decoded)
-        #break
 
     logger.info(f"request: {request}\tuser: {username}")
     if request == "post":
