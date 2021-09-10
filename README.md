@@ -1,4 +1,8 @@
-I wanted to figure out how to write an async server
-that could handle commands coming from multiple users
-simultaneously. The biggest hang up ended up being
-coming up with a method to handle input without blocking.
+This is a command line messenging app (mostly an excuse to work with an async server).
+
+Known issues:
+-client side buffer needs fixing (arrow keys and delete are causing problems)
+-client side isn't printing incoming messages when buffer gets wonky
+
+TODOs:
+-add print statement to client side that shows what that client has said
