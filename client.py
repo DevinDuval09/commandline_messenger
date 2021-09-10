@@ -41,6 +41,7 @@ class Client():
         self.logger.info("Response: %s received" % incoming_message)
         if incoming_message != "":
             print(incoming_message)
+            print()
     
     async def send_message(self):
         self.logger.info("Current message: %s" % self.client_input)
